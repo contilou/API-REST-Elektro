@@ -1,0 +1,38 @@
+{
+  "name": "API-REST-Elektro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node-dev --transpile-only --no-notify src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contilou/API-REST-Elektro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/contilou/API-REST-Elektro/issues"
+  },
+  "homepage": "https://github.com/contilou/API-REST-Elektro#readme",
+  "devDependencies": {
+    "@prisma/client": "^7.3.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.1.0",
+    "@types/pg": "^8.16.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "prisma": "^6.19.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.3.0",
+    "pg": "^8.18.0"
+  }
+}
