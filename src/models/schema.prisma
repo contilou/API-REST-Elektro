@@ -11,5 +11,38 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
+
 }
 
+enum ListingStatus {
+  AVAILABLE
+  SOLD_OUT
+  HIDDEN
+}
+
+model User {
+  user_id   String    @id @default(cuid())
+  name      String
+  cpf_cnpj  String    @unique
+  password  String
+  email     String    @unique
+  rating    Float?
+
+  listings  Listing[]
+
+}
+
+model Listing {
+  listing_id  String        @id @default(cuid())
+  title       String
+  price       Float
+  status      ListingStatus @default(AVAILABLE)
+  description String
+  stock       Int
+
+  author_id   String
+
+  author      User          @relation(fields: [author_id], references: [user_id]) 
+
+}
