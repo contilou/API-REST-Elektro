@@ -22,9 +22,9 @@ enum ListingStatus {
 }
 
 model User {
-  user_id   String    @id @default(cuid())
+  userId    String    @id @default(cuid())
   name      String
-  cpf_cnpj  String    @unique
+  cpfCnpj   String    @unique
   password  String
   email     String    @unique
   rating    Float?
@@ -34,15 +34,15 @@ model User {
 }
 
 model Listing {
-  listing_id  String        @id @default(cuid())
+  listingId   String        @id @default(cuid())
   title       String
   price       Float
   status      ListingStatus @default(AVAILABLE)
   description String
   stock       Int
 
-  author_id   String
+  authorId    String
 
-  author      User          @relation(fields: [author_id], references: [user_id]) 
+  author      User          @relation(fields: [authorId], references: [userId]) 
 
 }
