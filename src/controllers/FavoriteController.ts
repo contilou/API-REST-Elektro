@@ -75,7 +75,7 @@ export class FavoriteController{
                     }
     
                 });
-                res.status(204).json(deletedFavorite);
+                res.status(204);
     
             } catch (error:any) {
                 res.status(404).json({message: error.message});
