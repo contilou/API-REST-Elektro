@@ -1,0 +1,338 @@
+{
+  "info": {
+    "_postman_id": "78a57ca9-6c07-4422-b662-5dbe9350467a",
+    "name": "Elektro-API",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51779562",
+    "_collection_link": "https://go.postman.co/collection/51779562-78a57ca9-6c07-4422-b662-5dbe9350467a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User CRUD",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Zézinho2020\",\r\n    \"email\": \"zezinho@gmail.com\",\r\n    \"password\": \"senha_ultra_criptada\",\r\n    \"cpfCnpj\": \"123.456.789-00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read User",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Read All Users",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Zézinhewro2020\",\r\n    \"email\": \"zezsaassainhwerrrwo@gmail.com\",\r\n    \"password\": \"senhasf_ultra_criptada\",\r\n    \"cpfCnpj\": \"123.326.789-00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/user/cml2hg5fk0002v5jscvxgs19y",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user",
+                "cml2hg5fk0002v5jscvxgs19y"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/user/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Pasta contendo todos os métodos da CRUD de usuário"
+    },
+    {
+      "name": "Listing CRUD",
+      "item": [
+        {
+          "name": "Create Listing",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Zézinho2020\",\r\n    \"email\": \"zezinho@gmail.com\",\r\n    \"password\": \"senha_ultra_criptada\",\r\n    \"cpfCnpj\": \"123.456.789-00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read Listing",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Zézinho2020\",\r\n    \"email\": \"zezinho@gmail.com\",\r\n    \"password\": \"senha_ultra_criptada\",\r\n    \"cpfCnpj\": \"123.456.789-00\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3333/user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read All Listing",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Update Listing",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Zézinhewro2020\",\r\n    \"email\": \"zezsaassainhwerrrwo@gmail.com\",\r\n    \"password\": \"senhasf_ultra_criptada\",\r\n    \"cpfCnpj\": \"123.326.789-00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/user/cml2hg5fk0002v5jscvxgs19y",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user",
+                "cml2hg5fk0002v5jscvxgs19y"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Listing",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/user/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Pasta contendo todos os métodos da CRUD de anuncio"
+    },
+    {
+      "name": "Favorite CRUD",
+      "item": [
+        {
+          "name": "Create Favorite",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Zézinho2020\",\r\n    \"email\": \"zezinho@gmail.com\",\r\n    \"password\": \"senha_ultra_criptada\",\r\n    \"cpfCnpj\": \"123.456.789-00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read Favorites By User",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Zézinho2020\",\r\n    \"email\": \"zezinho@gmail.com\",\r\n    \"password\": \"senha_ultra_criptada\",\r\n    \"cpfCnpj\": \"123.456.789-00\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3333/user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Favorite",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/user/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "user",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Pasta contendo todos os métodos da CRUD de favoritos"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
