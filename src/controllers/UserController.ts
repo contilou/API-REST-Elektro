@@ -9,13 +9,14 @@ export class UserController{
     public static async createUser(req: Request, res: Response) {
 
         try {
-            const { name, cpfCnpj, password, email } = req.body;
+            const { name, cpfCnpj, password, email, phone } = req.body;
 
             const userCreateInput: Prisma.UserCreateInput = {
                 name: name,
                 cpfCnpj: cpfCnpj,
                 password: password,
                 email: email,
+                phone: phone
             };
 
             const createdUser = await prisma.user.create({
@@ -33,11 +34,11 @@ export class UserController{
 
         try {
             
-            const { id } = req.params;
+            const { userId } = req.params;
 
             const foundUser = await prisma.user.findUnique({
                 where: {
-                    userId: String(id)
+                    userId: String(userId)
                 },
 
                 select: {
@@ -46,6 +47,7 @@ export class UserController{
                     email: true,
                     cpfCnpj: true,
                     rating: true,
+                    phone: true
                 }
 
             });
@@ -61,7 +63,7 @@ export class UserController{
 
         try {
             
-            const { id } = req.params;
+            const { userId } = req.params;
 
             const foundUsers = await prisma.user.findMany({
                 select: {
@@ -70,6 +72,7 @@ export class UserController{
                     email: true,
                     cpfCnpj: true,
                     rating: true,
+                    phone: true
                 }
             });
 
@@ -83,18 +86,19 @@ export class UserController{
         public static async updateUser(req: Request, res: Response) {
 
         try {
-            const { name, email } = req.body;
-            const { id } = req.params;
+            const { name, email, phone } = req.body;
+            const { userId } = req.params;
 
             const userUpdateInput: Prisma.UserUpdateInput = {
                 name: name,
                 email: email,
+                phone: phone
             };
 
             const updatedUser = await prisma.user.update({
                 data: userUpdateInput,
                 where: {
-                    userId: String(id),
+                    userId: String(userId),
                 }
             });
             
@@ -109,11 +113,11 @@ export class UserController{
 
         try {
             
-            const { id } = req.params;
+            const { userId } = req.params;
 
             const deletedUser = await prisma.user.delete({
                 where: {
-                    userId: String(id)
+                    userId: String(userId)
                 },
             });
 

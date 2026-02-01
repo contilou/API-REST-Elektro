@@ -28,8 +28,11 @@ model User {
   password  String
   email     String    @unique
   rating    Float?
+  phone     String    @unique
 
   listings  Listing[]
+
+  favorites Favorite[]
 
 }
 
@@ -45,4 +48,18 @@ model Listing {
 
   author      User          @relation(fields: [authorId], references: [userId]) 
 
+  favoritedBy Favorite[]
+  
+}
+
+model Favorite {
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [userId])
+  userId    String 
+
+  listing   Listing  @relation(fields: [listingId], references: [listingId])
+  listingId String
+
+  @@id([userId, listingId])
 }

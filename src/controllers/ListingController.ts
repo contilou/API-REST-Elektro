@@ -56,11 +56,11 @@ export class ListingController{
     
             try {
                 
-                const { id } = req.params;
+                const { listingId } = req.params;
     
                 const foundListing = await prisma.listing.findUnique({
                     where: {
-                        listingId: String(id)
+                        listingId: String(listingId)
                     },
                     
                     include: {
@@ -87,7 +87,7 @@ export class ListingController{
 
         try {
             
-            const { id } = req.params;
+            const { listingId } = req.params;
 
             const foundListings = await prisma.listing.findMany({
                 include: {
@@ -113,7 +113,7 @@ export class ListingController{
 
         try {
             const { title, price, description, stock, status } = req.body;
-            const { id } = req.params;
+            const { listingId } = req.params;
 
             const listingUpdateInput: Prisma.ListingUpdateInput = {
                 title: title,
@@ -126,7 +126,7 @@ export class ListingController{
             const updatedListing = await prisma.listing.update({
                 data: listingUpdateInput,
                 where: {
-                    listingId: String(id),
+                    listingId: String(listingId),
                 }
             });
 
@@ -141,11 +141,11 @@ export class ListingController{
 
         try {
             
-            const { id } = req.params;
+            const { listingId } = req.params;
 
             const deletedListing = await prisma.listing.delete({
                 where: {
-                    listingId: String(id)
+                    listingId: String(listingId)
                 },
             });
 
